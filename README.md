@@ -15,6 +15,7 @@ docker build -t <image_name>:<version> .
 Run the Docker container with the following command:
 ```
 docker run --hostname ubuntu --name MyCudaLab \
+--restart always \
 -p port:22 \
 -itd \
 --gpus '"device=1,2,3"' \
